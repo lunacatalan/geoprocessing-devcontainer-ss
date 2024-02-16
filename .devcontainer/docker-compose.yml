@@ -1,0 +1,21 @@
+version: '3'
+services:
+  workspace:
+    user: root
+    image: seasketch/geoprocessing-workspace
+
+    # Keep container running after start
+    command: sleep infinity
+    # connect db service to network
+    network_mode: service:db
+    # database connection parameters
+    environment:
+      PGHOST: "db"
+      PGUSER: "docker"
+      PGPASSWORD: "docker"
+      PGDATABASE: "gis"
+  db:
+    image: seasketch/geoprocessing-db
+    # Port 54320 will be exposed on the host machine for accessing postgis.
+    ports:
+      - "54320:5432"
