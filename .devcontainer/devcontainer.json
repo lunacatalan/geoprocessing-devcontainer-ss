@@ -7,5 +7,14 @@
 	  "shutdownAction": "stopCompose",
 	  "remoteUser": "vscode",
 	  "containerUser": "vscode",
-	  "customizations": {}
+	  "customizations": {
+		// add repos that connect to codespace
+		"codespaces": {
+			"repositories": {
+				"lunacatalan/fsm-report-test": {
+					"permissions": "write-all"
+				}
+			}
+		}
+	  }
 	}
