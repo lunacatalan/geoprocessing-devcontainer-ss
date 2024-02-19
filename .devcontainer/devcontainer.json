@@ -11,7 +11,7 @@
 		// add repos that connect to codespace
 		"codespaces": {
 			"repositories": {
-				"lunacatalan/fsm-report-test": {
+				"lunacatalan/fsm-reports-test": {
 					"permissions": "write-all"
 				}
 			}
